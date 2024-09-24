@@ -26,16 +26,28 @@ def run_circle():
         delay(0.1)
     pass
 
+def run_top():
+    print('top')
+def run_right():
+    print('right')
+def runt_bottom():
+    print('bottom)
+def runt_left():
+    print('left')
+                
+
+
 def run_rectangle():
     print('rectangle')
-    grass.draw_now(400,30)
-    character.draw_now(400,90)
-
+    run_top()
+    run_right()
+    runt_bottom()
+    runt_left()
     pass
 
 while True:
     run_rectangle()
-    run_circle()
+    #run_circle()
     break    
 
 
