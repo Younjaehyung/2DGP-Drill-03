@@ -9,6 +9,11 @@ character = load_image('character.png')
 #grass.draw_now(400,30)
 #character.draw_now(400,90)
 
+def draw_charcter(x,y):
+    clear_canvas_now()
+    grass.draw_now(400,30)
+    character.draw_now(x,y)
+    delay(0.1)
 
 def run_circle():
     print('circle')
@@ -20,15 +25,15 @@ def run_circle():
         
         x=r*math.cos(theta)+cx
         y=r*math.sin(theta)+cy
-        clear_canvas_now()
-        grass.draw_now(400,30)
-        character.draw_now(x,y)
-        delay(0.1)
+        draw_charcter(x,y)
     pass
 
 def run_top():
+    for x in range(0,800,10):
+        draw_charcter(x,550)
     print('top')
 def run_right():
+    for y in range(600,0,-10):
     print('right')
 def runt_bottom():
     print('bottom)
