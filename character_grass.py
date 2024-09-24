@@ -12,11 +12,18 @@ character = load_image('character.png')
 
 def run_circle():
     print('circle')
-    
-    clear_canvas_now()
-    grass.draw_now(400,30)
-    character.draw_now(400,90)
-    delay(0.1)
+    r=300
+    cx=800//2
+    cy=600//2
+    for degree in range(0,360,3):
+        theta=math.radians(degree)
+        
+        x=r*math.cos(theta)+cx
+        y=r*math.sin(theta)+cy
+        clear_canvas_now()
+        grass.draw_now(400,30)
+        character.draw_now(x,y)
+        delay(0.1)
     pass
 
 def run_rectangle():
