@@ -11,14 +11,25 @@ character = load_image('character.png')
 
 
 def run_circle():
+    print('circle')
+    
+    clear_canvas_now()
+    grass.draw_now(400,30)
+    character.draw_now(400,90)
+    delay(0.1)
     pass
 
 def run_rectangle():
+    print('rectangle')
+    grass.draw_now(400,30)
+    character.draw_now(400,90)
+
     pass
 
 while True:
     run_rectangle()
-    run_circle()   
+    run_circle()
+    break    
 
 
 
