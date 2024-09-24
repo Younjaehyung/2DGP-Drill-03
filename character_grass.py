@@ -13,7 +13,7 @@ def draw_charcter(x,y):
     clear_canvas_now()
     grass.draw_now(400,30)
     character.draw_now(x,y)
-    delay(0.1)
+    delay(0.05)
 
 def run_circle():
     print('circle')
@@ -33,11 +33,16 @@ def run_top():
         draw_charcter(x,550)
     print('top')
 def run_right():
-    for y in range(600,0,-10):
+    for y in range(550,100,-10):
+         draw_charcter(790,y)
     print('right')
-def runt_bottom():
-    print('bottom)
-def runt_left():
+def run_bottom():
+    for x in range(790,0,-10):
+         draw_charcter(x,90)
+    print('bottom')
+def run_left():
+    for y in range(90,560,10):
+         draw_charcter(0,y)
     print('left')
                 
 
@@ -46,14 +51,35 @@ def run_rectangle():
     print('rectangle')
     run_top()
     run_right()
-    runt_bottom()
-    runt_left()
+    run_bottom()
+    run_left()
+    pass
+
+
+def run_rightdown():
+    for x in range(0,410,10):
+        y=600-x
+        draw_charcter(x,y)
+def run_rightup():
+    for x in range(400,810,10):
+        y=x-200
+        draw_charcter(x,y)
+def run_lefttop():
+    for x in range(800,0,-10):
+        draw_charcter(x,600)
+
+        
+def run_triangle():
+    run_rightdown()
+    run_rightup()
+    run_lefttop()
     pass
 
 while True:
     run_rectangle()
-    #run_circle()
-    break    
+    run_circle()
+    run_triangle()
+    
 
 
 
